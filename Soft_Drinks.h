@@ -15,9 +15,9 @@ public:
     Soft_Drinks(std::string name, unsigned int volume, bool carbonated);
     virtual bool GetCarbonated() const;
     Soft_Drinks() = delete;
-    Soft_Drinks(Soft_Drinks& drink) = delete;
+    Soft_Drinks(const Soft_Drinks& drink) = delete;
     Soft_Drinks(Soft_Drinks&& drink) = delete;
-    Soft_Drinks operator=(Soft_Drinks drink) = delete;
+    Soft_Drinks& operator=(const Soft_Drinks& drink) = delete;
     ~Soft_Drinks() override = default;
 };
 

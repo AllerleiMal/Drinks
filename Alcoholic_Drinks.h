@@ -15,9 +15,9 @@ public:
     Alcoholic_Drinks(std::string name, unsigned int volume_ml, unsigned int fortress);
     virtual unsigned int GetFortress() const;
     Alcoholic_Drinks() = delete;
-    Alcoholic_Drinks(Alcoholic_Drinks& drink) = delete;
+    Alcoholic_Drinks(const Alcoholic_Drinks& drink) = delete;
     Alcoholic_Drinks(Alcoholic_Drinks&& drink) = delete;
-    Alcoholic_Drinks operator=(Alcoholic_Drinks drink) = delete;
+    Alcoholic_Drinks& operator=(const Alcoholic_Drinks& drink) = delete;
     ~Alcoholic_Drinks() override = default;
 };
 

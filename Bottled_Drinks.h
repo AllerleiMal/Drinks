@@ -13,9 +13,9 @@ public:
     virtual std::string GetName() const;
     virtual unsigned int GetVolume() const;
     Bottled_Drinks() = delete;
-    Bottled_Drinks(Bottled_Drinks& drink) = delete;
+    Bottled_Drinks(const Bottled_Drinks& drink) = delete;
     Bottled_Drinks(Bottled_Drinks&& drink) = delete;
-    Bottled_Drinks operator=(Bottled_Drinks drink) = delete;
+    Bottled_Drinks& operator=(const Bottled_Drinks& drink) = delete;
     virtual ~Bottled_Drinks() = default;
 };
 
