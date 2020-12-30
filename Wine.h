@@ -9,9 +9,9 @@
 #include "Alcoholic_Drinks.h"
 
 enum WineType{
-    Dry,
-    Semi_dry,
-    Pop
+    DRY,
+    SEMI_DRY,
+    POP
 };
 
 class Wine : public Alcoholic_Drinks{

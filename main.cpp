@@ -30,12 +30,12 @@ int main() {
         std::cout << "Enter 1 if it is carbonated, else enter 0" << '\n';
         std::cin >> carbonated;
     }
-    Beer* beer;
-    Wine* wine;
-    Cognac* cognac;
-    Lemonade* lemonade;
-    Mineral_Water* mineralWater;
-    Milk* milk;
+    Beer* beer = nullptr;
+    Wine* wine = nullptr;
+    Cognac* cognac = nullptr;
+    Lemonade *lemonade = nullptr;
+    Mineral_Water* mineralWater = nullptr;
+    Milk* milk = nullptr;
     switch(choice){
         case 1:
             std::cout << "Enter the ingredient of beer, where 1 is Barley, 2 is Wheat and 3 is Ginger" << '\n';
@@ -43,13 +43,13 @@ int main() {
             std::cin >> temp;
             Ingredient type;
             if (temp == 1) {
-                type = Ingredient::Barley;
+                type = Ingredient::BARLEY;
             }
             if (temp == 2) {
-                type = Ingredient::Wheat;
+                type = Ingredient::WHEAT;
             }
             if (temp == 3) {
-                type = Ingredient::Ginger;
+                type = Ingredient::GINGER;
             }
             beer = new Beer(name, volume, fortress, type);
             std::cout << "Result:" << '\n';
@@ -74,13 +74,13 @@ int main() {
             std::cin >> temp;
             WineType wineType;
             if (temp == 1) {
-                wineType = WineType::Dry;
+                wineType = WineType::DRY;
             }
             if (temp == 2) {
-                wineType = WineType::Semi_dry;
+                wineType = WineType::SEMI_DRY;
             }
             if (temp == 3) {
-                wineType = WineType::Pop;
+                wineType = WineType::POP;
             }
             wine = new Wine(name, volume, fortress, wineType);
             std::cout << "Result:" << '\n';
@@ -94,19 +94,19 @@ int main() {
             std::cin >> temp;
             Colour colour;
             if (temp == 1) {
-                colour = Colour::Red;
+                colour = Colour::RED;
             }else if (temp == 2) {
-                colour = Colour::Orange;
+                colour = Colour::ORANGE;
             }else if (temp == 3) {
-                colour = Colour::Yellow;
+                colour = Colour::YELLOW;
             }else if (temp == 4) {
-                colour = Colour::Green;
+                colour = Colour::GREEN;
             }else if (temp == 5) {
-                colour = Colour::Blue;
+                colour = Colour::BLUE;
             }else if (temp == 6) {
-                colour = Colour::Purple;
+                colour = Colour::PURPLE;
             }else if (temp == 7) {
-                colour = Colour::Colourless;
+                colour = Colour::COLOURLESS;
             }else{
                 std::cout << "Wrong input information" << '\n';
                 return 0;
@@ -133,13 +133,13 @@ int main() {
             std::cin >> temp;
             MineralWaterTypes waterType;
             if (temp == 1) {
-                waterType = MineralWaterTypes::Table;
+                waterType = MineralWaterTypes::TABLE;
             }
             if (temp == 2) {
-                waterType = MineralWaterTypes::Therapeutic_Table;
+                waterType = MineralWaterTypes::THERAPEUTIC_TABLE;
             }
             if (temp == 3) {
-                waterType = MineralWaterTypes::Therapeutic;
+                waterType = MineralWaterTypes::THERAPEUTIC;
             }
             mineralWater = new Mineral_Water(name, volume, carbonated, waterType);
             std::cout << "Result:" << '\n';

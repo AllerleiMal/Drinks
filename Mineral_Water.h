@@ -9,9 +9,9 @@
 #include "Soft_Drinks.h"
 
 enum MineralWaterTypes{
-    Table,
-    Therapeutic_Table,
-    Therapeutic
+    TABLE,
+    THERAPEUTIC_TABLE,
+    THERAPEUTIC
 };
 class Mineral_Water : public Soft_Drinks{
 private:

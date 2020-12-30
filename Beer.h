@@ -9,9 +9,9 @@
 #include "Alcoholic_Drinks.h"
 
 enum Ingredient{
-    Barley,
-    Wheat,
-    Ginger
+    BARLEY,
+    WHEAT,
+    GINGER
 };
 
 class Beer : public Alcoholic_Drinks{

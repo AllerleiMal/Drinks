@@ -11,14 +11,17 @@
 class Alcoholic_Drinks : public Bottled_Drinks {
 private:
     unsigned int fortress_;
-public:
+protected:
     Alcoholic_Drinks(std::string name, unsigned int volume_ml, unsigned int fortress);
+
+public:
     virtual unsigned int GetFortress() const;
     Alcoholic_Drinks() = delete;
     Alcoholic_Drinks(const Alcoholic_Drinks& drink) = delete;
     Alcoholic_Drinks(Alcoholic_Drinks&& drink) = delete;
     Alcoholic_Drinks& operator=(const Alcoholic_Drinks& drink) = delete;
-    ~Alcoholic_Drinks() override = default;
+    Alcoholic_Drinks& operator=(Alcoholic_Drinks&& drink) = delete;
+    virtual ~Alcoholic_Drinks() = default;
 };
 
 

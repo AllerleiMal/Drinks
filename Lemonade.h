@@ -8,13 +8,13 @@
 #include "Soft_Drinks.h"
 
 enum Colour{
-    Blue,
-    Orange,
-    Red,
-    Yellow,
-    Purple,
-    Green,
-    Colourless
+    BLUE,
+    ORANGE,
+    RED,
+    YELLOW,
+    PURPLE,
+    GREEN,
+    COLOURLESS
 };
 
 class Lemonade : public Soft_Drinks {
